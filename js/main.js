@@ -129,10 +129,14 @@ $(document).ready(function() {
             t.attr(tokenAttributeName, crossTokenName)
         }
         if (checkWin(turn)) {
-            alert(turn + " Won!");
+            var input = turn + "Won!";
+            $("body").append("<audio autoplay><source src=http://tts-api.com/tts.mp3?q=" + input + " type=audio/mpeg></audio><p>");
+            $(document).scrollTop($(document).height());
             won = true
         } else if (checkDraw()) {
-            alert("It's a Draw!")
+            var input = "It's";
+            $("body").append("<audio autoplay><source src=http://tts-api.com/tts.mp3?q=" + input + " type=audio/mpeg></audio>");
+            $(document).scrollTop($(document).height());
         }
         if (turn == circleTokenName) turn = crossTokenName;
         else turn = circleTokenName
