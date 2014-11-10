@@ -134,7 +134,7 @@ $(document).ready(function() {
             $(document).scrollTop($(document).height());
             won = true
         } else if (checkDraw()) {
-            var input = "It's a draw";
+            var input = "Its a draw";
             $("body").append("<audio autoplay><source src=http://tts-api.com/tts.mp3?q=" + input + " type=audio/mpeg></audio>");
             $(document).scrollTop($(document).height());
         }
